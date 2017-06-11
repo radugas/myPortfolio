@@ -8,7 +8,7 @@
 .contacts h2 {
     color: #25c0a5;
     font-size: 30px;
-    font-weight: 400;
+    font-weight: 500;
     margin-top: 30px;
 }
 
@@ -19,6 +19,7 @@
     color: #535353;
     font-size: 18px;
     font-weight: 400;
+	padding-bottom: 10px;
 }
 
 .header {
@@ -40,13 +41,12 @@
     }
 }
 
-
 /* end h1 animation */
 
 .header h1 {
     color: #42dac0;
     font-size: 30px;
-    font-weight: 400;
+    font-weight: 500;
     line-height: 48px;
     margin-top: 200px;
     animation-name: zoomIn;
@@ -103,16 +103,21 @@
 
 /*.skills {
     height: 730px;
-}*/
+}
 
 .skills img {
     width: auto;
     height: auto;
     margin-top: 154px;
+}*/
+img {
+    display: inline-block;
+    height: auto;
+    max-width: 100%;
 }
 
 .works img {
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 }
 
 .works h2 {
