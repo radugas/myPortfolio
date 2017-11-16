@@ -104,7 +104,9 @@ body {
     margin-top: 75px;
     text-align: center;
 }
-
+.main h4 {
+    color: #25c0a5;
+}
 
 /*.skills {
     height: 730px;
