@@ -3,9 +3,11 @@ body {
 	margin: 0;
 	box-sizing: border-box;
 }
-.container {
+
+.wrapper {
     text-align: center;
-	padding-bottom: 10px;
+    display: flex;
+    flex-direction: column;
 }
 
 .main h2,
@@ -13,37 +15,43 @@ body {
 .works h2,
 .contacts h2 {
     color: #25c0a5;
+    text-transform: uppercase;
     font-size: 30px;
     font-weight: 500;
     margin-top: 30px;
 }
 
+.works p,
 .main p,
 .skills p,
-.works p,
 .contacts p {
     color: #535353;
     font-size: 18px;
     font-weight: 400;	
+    padding: 25px 0;
 }
 
-.header {
-    height: 717px;
+.header, .works {
+    min-height: 100vh;
     background: url(../img/Background.png) no-repeat center center;
     background-size: cover;
+    background-attachment: fixed;
 }
 
 
 /* h1 animation */
 
-@keyframes zoomIn {
-    from {
-        opacity: 0;
-        transform: scale3d(.3, .3, .3);
-    }
-    50% {
-        opacity: 1;
-    }
+@keyframes slideInRight {
+  from {
+    -webkit-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0);
+    visibility: visible;
+  }
+
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
 }
 
 /* end h1 animation */
@@ -54,8 +62,8 @@ body {
     font-weight: 500;
     line-height: 48px;
     margin-top: 200px;
-    animation-name: zoomIn;
-    animation-duration: 4s;
+    animation-name: slideInRight;
+    animation-duration: 2s;    
 }
 
 .header a {
@@ -90,6 +98,7 @@ body {
 
 .main {
     background-color: rgb(243, 243, 243);
+    min-height: 100vh;
 }
 
 .main img {
@@ -108,30 +117,42 @@ body {
     color: #25c0a5;
 }
 
-/*.skills {
-    height: 730px;
+#about-me i {
+    color: #25c0a5;
+    background: transparent;
 }
 
-.skills img {
-    width: auto;
+.works {
+    min-height: 100vh;
+    padding-top: 25px;
+}
+
+.works p{
+    color: #fff;
+}
+
+.flex-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    align-content: space-between;
+}
+
+.flex-container > div{
+    margin: .5vw;
+    /*margin-bottom: 35px;*/
+    width: 320px;
+}
+
+.flex-container > div > a > img{
+    width: 100%;
     height: auto;
-    margin-top: 154px;
-}*/
-img {
-    display: inline-block;
-    height: auto;
-    max-width: 100%;
+
 }
 
-.works img {
-    padding-bottom: 15px;
-}
-
-.works h2 {
-    margin-bottom: 50px;
-}
-
-.social-icons li a img:hover {
+.social-icons li a i:hover {
     background-color: #42dac0;
 }
 
@@ -140,14 +161,40 @@ img {
     margin: 0 auto;
 }
 
-.social-icons img {
+.social-icons i {
     margin-top: 50px;
     margin-right: 50px;
 }
 
 .contacts {
-    max-height: 576px;
+    height: 100vh;
     background-color: rgb(243, 243, 243);
+    padding-top: 25px;
+}
+
+.input-container{
+    display: flex;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.icon {
+  padding: 10px;
+  background: #25c0a5;
+  color: white;
+  min-width: 50px;
+  text-align: center;
+}
+
+.form-control {
+    width: 100%;
+    padding: 10px;
+    outline: none;
+    border-radius: 0px;
+}
+
+.form-control:focus{
+    border: 2px solid #25c0a5;
 }
 
 .contacts .btn {
@@ -156,6 +203,7 @@ img {
     width: 133px;
     height: 53px;
     background-color: #25c0a5;
+    opacity: 1;
     color: #ffffff;
     font-size: 14px;
     font-weight: 700;
@@ -166,10 +214,12 @@ img {
 }
 
 .contacts .btn:hover {
-    background-color: #e6e6e6;
+    opacity: 0.7;
 }
 
-footer p,
+footer p {
+    margin-top: 25px;
+}
 footer ul {
     margin-top: 10px;
 }
@@ -180,12 +230,12 @@ footer li {
     margin-right: 10px;
 }
 
-footer img {
-    height: 25px;
-    width: 25px;
-    background-color: #25c0a5;
+footer i {      
+    background: #fff;  
+    color: #25c0a5;
+    opacity: 1;
 }
 
-footer img:hover {
-    background-color: #e6e6e6;
+footer i:hover {
+    opacity: 0.7;
 }
