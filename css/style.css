@@ -167,7 +167,7 @@ body {
 }
 
 .contacts {
-    height: 100vh;
+    min-height: 100vh;
     background-color: rgb(243, 243, 243);
     padding-top: 25px;
 }
