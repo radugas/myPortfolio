@@ -135,7 +135,7 @@ body {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     align-content: space-between;
 }
@@ -241,16 +241,24 @@ footer i:hover {
 }
 
 
-/* Extra Small Devices, Phones */
-@media only screen and (max-width : 600px) {
+/* Small Devices, Phones */
 
-    .header, .works {
-        min-height: 100vh;
-        background: url(../img/Background.png) no-repeat center center;
-        background-size: cover;
+@media only screen and (max-width: 575px) and (orientation: portrait) {
+
+    .works {        
+        background: url(../img/Background-mobile.png) no-repeat center center; 
+        background-size: cover;       
         background-attachment: initial;
     }
+    
+    .flex-container > div {
+        width: 70%;
+   
+    }   
+}
 
+
+@media only screen and (max-width : 767px) {
 
     .flex-container > div {
         margin: 1vw auto;
