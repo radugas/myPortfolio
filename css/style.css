@@ -242,12 +242,20 @@ footer i:hover {
 
 
 /* Extra Small Devices, Phones */
-@media only screen and (max-width : 480px) {
+@media only screen and (max-width : 600px) {
+
+    .header, .works {
+        min-height: 100vh;
+        background: url(../img/Background.png) no-repeat center center;
+        background-size: cover;
+        background-attachment: initial;
+    }
+
 
     .flex-container > div {
-    margin: 1vw auto;
+        margin: 1vw auto;
    
-}
+    }
 }
 
 
