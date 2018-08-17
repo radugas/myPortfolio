@@ -131,6 +131,10 @@ body {
     color: #fff;
 }
 
+.works a {
+    z-index: 5;
+}
+
 .flex-container {
     display: flex;
     flex-direction: row;

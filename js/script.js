@@ -19,6 +19,23 @@ $(document).ready(function () {
         $(this).toggle(3000,linear);
     });
 
+
+    $("a").on('click', function(event) {
+        
+        if (this.hash !== "") {
+            event.preventDefault();
+
+            var hash = this.hash;
+
+            $('html, body').animate({
+              scrollTop: $(hash).offset().top
+              }, 800, function(){
+                window.location.hash = hash;
+                });
+
+        }
+    });
+
     //form
     // $('.ajax').on('submit', function(){
     //     var that = $(this),
