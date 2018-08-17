@@ -5,15 +5,15 @@ $(document).ready(function () {
         $(this).animate({
             height: '+=15px',
             width: '+=15px',
-            opacity: 0.7
-        });
+            opacity: 0.5
+        }, 'slow');
     });
     $('.works-img').mouseout(function () {
         $(this).animate({
             height: '-=15px',
             width: '-=15px',
             opacity: 1
-        });
+        }, 'slow');
     });
     $('.works-img').click(function () {
         $(this).toggle(3000,linear);
