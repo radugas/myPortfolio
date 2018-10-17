@@ -63,7 +63,7 @@ body {
     line-height: 48px;
     margin-top: 200px;
     animation-name: slideInRight;
-    animation-duration: 2s;    
+    animation-duration: 3s;    
 }
 
 .header a {
@@ -261,6 +261,86 @@ footer i:hover {
     opacity: 0.7;
 }
 
+/*PRELOADER*/
+
+.preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgb(243, 243, 243);
+    z-index: 100;
+    
+}
+
+.animation-bar {
+    position: relative;
+    display: block;
+    width: 20%;
+    height: 20px;
+    left: 40%;
+    top: 50vh;
+    margin-left: -40px;
+    margin-top: -40px;
+    font-size: 16px;
+    line-height: 16px;
+    padding: 5px;    
+    background: rgba(0,0,0,0.1);
+    box-shadow: inset 0 2px rgba(0,0,0,0.25), 0 1px rgba(255,255,255,0.8);
+}
+
+.animation-bar span {
+    position: absolute;
+    display: inline-block;
+    vertical-align: middle;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: #25c0a5;
+    background-size: 100%;
+    background-image: linear-gradient(to right, #25c0a5, #008081);
+    animation: progress-bar 6s infinite ease;
+}
+
+.animation-bar span::before {
+    position: absolute;
+    display: inline-block;
+    right: 0;
+    bottom: 100%;
+    width: 0;
+    height: 0;
+    border: 10px solid transparent;
+    border-right-width: 0;
+    border-bottom-width: 0;
+    border-top-color: #25c0a5;
+    content: '';
+}
+
+.animation-bar span::after {
+    position: absolute;
+    right: 0;
+    bottom: calc(100% + 5px);
+    z-index: 1;
+    display: inline-block;
+    content: attr(data-label);
+    padding: 5px;
+    border-radius: 3px;
+    font-size: 0.8em;
+    background-color: #25c0a5;
+    color: #fff;
+}
+
+@keyframes progress-bar {
+    0% {
+        width: 0%;
+    }
+
+    100% {
+        width: 100%;
+    }
+}
+/*PRELOADER*/
 
 /* Small Devices, Phones */
 

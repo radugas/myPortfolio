@@ -1,3 +1,7 @@
+$(window).on('load', function() {
+    $('.preloader').delay(1000).fadeOut('slow');
+});
+
 // $(document).ready(function () {
 
 //     //animation work-section
